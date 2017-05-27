@@ -1,0 +1,153 @@
+/*
+Theme Name: drento
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+.socialLine {
+    direction: ltr;
+}
+.spaceLeft {
+	margin-left: 0;
+	margin-right: 0.5em;
+}
+.spaceRight {
+	margin-right: 0;
+	margin-left: 0.5em;
+}
+.main-navigation .spaceRight {
+	margin-right: 0.5em;
+	margin-left: 0;
+}
+.sticky .entry-title {
+    padding-left: 0;
+	padding-right: 40px;
+}
+.sticky .entry-header .entry-title:before {
+	left: inherit;
+	right: 0;
+}
+.widget_archive li a, .widget_categories li a {
+	float: right;
+}
+.widget_archive li, .widget_categories li {
+	text-align: left;
+}
+.widget.widget_categories li:before {
+	padding-right: inherit;
+	padding-left: 0.5em;
+	float: right;
+}
+.widget.widget_archive li:before {
+	content: "\f0d9";
+	padding-right: inherit;
+	padding-left: 0.5em;
+	float: right;
+}
+#comments .reply {
+    right: inherit;
+	left: 0;
+}
+#comments article footer img {
+    float: right;
+    margin-right: 0;
+	margin-left: 1em;
+}
+#comments ol ol {
+    padding-left: 0;
+	padding-right: 5%;
+}
+
+.main-navigation div > ul > li > ul::before {
+	right: 30px;
+	left: inherit;
+}
+.main-navigation div > ul > li > ul::after {
+	right: 27px;
+	left: inherit;
+}
+.main-navigation ul {
+	padding-right: 0;
+}
+.main-navigation ul ul a {
+	text-align: right;
+}
+.main-navigation li a:not(:last-child):after {
+    margin: 0 10px 0 0;
+	float: left;
+}
+.main-navigation ul ul li a:not(:last-child):after {
+    content: "\f104";
+    margin: 2px 10px 0 0;
+    float: left;
+}
+.main-navigation ul ul ul {
+	right: 100%;
+	left: inherit;
+}
+.main-navigation ul ul li {
+    margin: 0 1px 1px 0;
+}
+.read-more i::before {
+	content: "\f0d9";
+}
+.main-navigation li a:not(:last-child):after {
+	line-height: inherit;
+}
+.entry-meta > span {
+	margin-right: inherit;
+	margin-left: 1em;
+}
+.drentoSearch {
+	left: inherit;
+	right: 2.5em;
+}
+#toTop {
+	right: inherit;
+	left: 2.5em;
+}
+.site-main .navigation.pagination .nav-links a i.fa-angle-double-right:before {
+	content: "\f100";
+}
+.site-main .navigation.pagination .nav-links a i.fa-angle-double-left:before {
+	content: "\f101";
+}
+aside ul.menu .indicatorBar {
+	right: inherit;
+	left: 0;
+	border-left-width: 0px;
+	border-right-width: 1px;
+	border-right-style: dashed;
+}
+aside ul.menu ul.sub-menu {
+	padding-left: 0em;
+	padding-right: 2em;
+}
+@media all and (max-width: 1024px) {
+	.menu-toggle i {
+		margin-left: 1em;
+		margin-right: inherit;
+	}
+	.main-navigation ul li .indicator {
+		right: inherit;
+		left: 0;
+		border-right: 1px dashed rgba(64, 64, 64, 0.1);
+		border-left: 0;
+	}
+	.main-navigation ul ul, .main-navigation ul ul ul {
+		padding-right: 3%;
+		padding-left: 0;
+	}
+	.drentoSearch {
+		float: left;
+	}
+}
